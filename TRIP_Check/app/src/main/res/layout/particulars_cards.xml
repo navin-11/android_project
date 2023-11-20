@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:layout_marginBottom="160dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="150dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/editViewCardLayout"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:background="#000000"
+                android:elevation="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editViewConstraint2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/app_background">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/linearLayoutTwo"
+                        app:layout_constraintHorizontal_bias="0.52"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/taskTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:singleLine="true"
+                                android:text="Time : 11.11 AM"
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp">
+
+                            <TextView
+                                android:id="@+id/taskLocation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="Location : Signl"
+                                android:textColor="#464646"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/taskRemark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="Remarks : Fine "
+                            android:textColor="#005285"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/taskPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:gravity="end"
+                            android:text="Lat &amp; Long : 11.11111 , 11.11111"
+                            android:textColor="#8D0D0D"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="300dp"
+                            app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutTwo"
+                            android:layout_width="4dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="2dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <View
+                                android:id="@+id/taskStatusView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#005285"
+                                android:paddingLeft="0.5dp"
+                                android:paddingTop="0.5dp"
+                                android:paddingRight="0.5dp"
+                                android:paddingBottom="0.5dp"
+                                android:radius="15dp"
+                                android:visibility="visible" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/messagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/form"
+            android:layout_alignParentTop="false"
+            android:background="@drawable/app_background"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="alwaysScroll">
+
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:paddingBottom="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constrain1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border">
+
+                <EditText
+                    android:id="@+id/messageEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:drawableEnd="@drawable/ic_camera_alt_black_24dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:maxHeight="84dp"
+                    android:maxLength="255"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/Constrain2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+
+                <!--<TextView
+            android:id="@+id/timer_text"
+            android:layout_width=""
+            android:layout_height="75dp"
+            android:textSize="15dp"
+            android:text=""
+            android:textColor="#fa0707"
+
+            />-->
+                <!--    <Button
+                    android:id="@+id/buttonOpenCamera"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/camera"
+                    android:onClick="dispatchTakePictureIntent"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/Constrain2"
+                    app:layout_constraintStart_toEndOf="@+id/messageEdit"></Button>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/Constrain2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_chat_icon"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/messageEdit"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+
+                        android:id="@+id/chatSendButton"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/ic_send_black_24dp"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/record"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/record"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_mic_black_24dp"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/chatSendButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/stop"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/stopPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/play"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="STOP PLAYING RECORDING " />-->
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
